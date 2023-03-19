@@ -1,0 +1,33 @@
+:root {
+  --Moderate-cyan: hsl(176, 50%, 47%);
+  --Dark-cyan: hsl(176, 72%, 28%);
+
+  --Black: hsl(0, 0%, 0%);
+  --Dark-gray: hsl(0, 0%, 48%);
+}
+
+* {
+  font-family: "Commissioner", sans-serif;
+}
+html,
+body {
+  height: 100%;
+  background-color: seashell;
+}
+
+.main-header {
+  background-image: url(images/image-hero-desktop.jpg);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 400px;
+}
+
+.container {
+  transform: translateY(-75px);
+  max-width: 720px;
+}
+
+.mastercraft-logo {
+  top: -80px;
+}
