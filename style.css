@@ -52,6 +52,7 @@ h4,
 button {
   font-weight: 500;
 }
+
 .back-btn {
   background-color: var(--Moderate-cyan);
   height: 56px;
@@ -62,6 +63,24 @@ button {
   width: 160px;
   text-align: right;
   content: "bookmark";
+}
+
+.stats div {
+  border-right: 1px solid hsl(0, 3%, 84%);
+}
+
+.range-bg {
+  width: 100%;
+  height: 0.8rem;
+  border-radius: 0.8rem;
+  background: hsl(0, 3%, 94%);
+}
+
+.range {
+  width: 80%;
+  height: 100%;
+  border-radius: 1rem;
+  background-color: var(--Moderate-cyan);
 }
 
 .card h5 {
@@ -81,6 +100,8 @@ button.disabled {
   opacity: 0.5;
 }
 
+/* RESPONSIVE */
+
 @media (max-width: 575px) {
   header p {
     font-size: 0.76rem;
@@ -92,6 +113,17 @@ button.disabled {
 
   .bookmark-btn {
     opacity: 0;
+  }
+
+  .stats div {
+    border-right: none;
+  }
+
+  .line {
+    height: 1px;
+    width: 100px;
+    background-color: hsl(0, 3%, 84%);
+    margin-inline: auto;
   }
 }
 
