@@ -26,8 +26,34 @@ body {
 .container {
   transform: translateY(-75px);
   max-width: 720px;
+  color: var(--Dark-gray);
 }
 
 .mastercraft-logo {
   top: -80px;
+}
+
+h1,
+h2,
+h3,
+h4,
+.card span {
+  color: var(--Black);
+}
+
+.card h5 {
+  color: var(--Moderate-cyan);
+}
+
+.card button {
+  background-color: var(--Moderate-cyan);
+  font-size: 0.8rem;
+}
+
+button.disabled {
+  background-color: var(--Dark-gray);
+}
+
+.card:last-child {
+  opacity: 0.5;
 }
