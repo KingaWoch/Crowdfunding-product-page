@@ -43,7 +43,7 @@
         ><img src="images/logo.svg" alt="Crowdfund logo"
       /></a>
       <nav>
-        <ul class="d-flex gap-4">
+        <ul class="d-flex gap-4 d-sm-flex d-none">
           <a href="#" class="text-decoration-none text-white">
             <li class="list-unstyled">About</li>
           </a>
@@ -54,31 +54,44 @@
             <li class="list-unstyled">Get Started</li>
           </a>
         </ul>
+        <button class="btn d-sm-none d-block">
+          <img src="images/icon-hamburger.svg" alt="menu" />
+        </button>
       </nav>
     </header>
     <main>
       <div class="container d-grid gap-3">
-        <header class="row bg-white p-5">
+        <header class="row bg-white p-sm-5 px-4 py-5 gap-3">
           <div class="col-12 text-center position-relative">
             <img
               src="images/logo-mastercraft.svg"
               alt="mastercraft logo"
               class="mastercraft-logo position-absolute"
             />
-            <h1 class="fw-bold">Mastercraft Bamboo Monitor Riser</h1>
+            <h1 class="fw-bold fs-3 pb-2">Mastercraft Bamboo Monitor Riser</h1>
             <p>
               A beautiful & handcrafted monitor stand to reduce neck and eye
               strain.
             </p>
           </div>
-          <div class="col-6">
-            <button class="border-0 p-3 rounded-pill">Back this project</button>
-          </div>
-          <div class="col-6 text-end">
-            <button class="border-0 rounded-pill">
-              <img src="images/icon-bookmark.svg" alt="bookmark" />
-              Bookmark
-            </button>
+          <div class="row">
+            <div class="col-sm-6 col-10">
+              <button
+                class="back-btn border-0 p-3 px-md-5 px-4 rounded-pill text-white"
+              >
+                Back this project
+              </button>
+            </div>
+            <div class="col-sm-6 col-2 text-end position-relative">
+              <img
+                src="images/icon-bookmark.svg"
+                alt="bookmark"
+                class="position-absolute top-0"
+              />
+              <button class="bookmark-btn border-0 p-3 rounded-pill">
+                Bookmark
+              </button>
+            </div>
           </div>
         </header>
         <section class="row bg-white p-5">
