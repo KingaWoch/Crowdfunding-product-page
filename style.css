@@ -146,6 +146,10 @@ button.disabled {
 /* RESPONSIVE */
 
 @media (max-width: 575px) {
+  section p {
+    font-size: 0.85rem;
+  }
+
   .modal-dialog {
     position: absolute;
     top: 5rem;
@@ -183,6 +187,7 @@ button.disabled {
 
   .back-btn {
     font-size: 0.8rem;
+    width: 100%;
   }
 
   .bookmark-btn {
