@@ -40,6 +40,10 @@ ul li a {
   text-decoration: none;
 }
 
+ul li a:hover {
+  color: white;
+}
+
 .mastercraft-logo {
   top: -80px;
   right: 44%;
@@ -73,6 +77,30 @@ button {
   width: 160px;
   text-align: right;
   content: "bookmark";
+  font-weight: 700;
+}
+
+.bookmark-btn.active {
+  background-color: hsla(176, 50%, 47%, 0.1);
+  color: var(--Dark-cyan);
+  width: 180px;
+}
+
+.bookmark-btn-icon {
+  outline: none;
+  height: 56px;
+  width: 56px;
+  background: url(images/icon-bookmark.svg);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.bookmark-btn-icon.active {
+  background: url(images/icon-bookmarked.svg);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
 }
 
 .stats div {
@@ -110,6 +138,11 @@ button.disabled {
   opacity: 0.5;
 }
 
+.back-btn:hover,
+.card button:hover {
+  background-color: var(--Dark-cyan);
+}
+
 /* RESPONSIVE */
 
 @media (max-width: 575px) {
@@ -139,7 +172,8 @@ button.disabled {
     border-bottom: none;
   }
 
-  ul li a {
+  ul li a,
+  ul li a:hover {
     color: var(--Black);
   }
 
