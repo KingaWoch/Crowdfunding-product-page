@@ -65,7 +65,7 @@
           <img src="images/icon-hamburger.svg" alt="menu" />
         </button>
 
-        <!-- Modal -->
+        <!-- Nav Modal start -->
         <div
           class="modal fade"
           id="navModal"
@@ -74,7 +74,7 @@
           aria-labelledby="navModalLabel"
           aria-hidden="true"
         >
-          <div class="modal-dialog">
+          <div class="modal-dialog nav-modal-dialog">
             <div class="modal-content border-0 bg-transparent">
               <button
                 class="btn close-btn d-sm-none position-absolute"
@@ -83,7 +83,7 @@
               >
                 <img src="images/icon-close-menu.svg" alt="close-menu" />
               </button>
-              <div class="modal-body p-0 bg-white">
+              <div class="modal-body nav-modal-body p-0 bg-white">
                 <ul
                   class="d-sm-none d-flex flex-sm-row flex-column fs-5 p-0 m-0"
                 >
@@ -101,9 +101,135 @@
             </div>
           </div>
         </div>
+        <!-- Nav Modal end -->
       </nav>
     </header>
     <main>
+      <!-- Main Modal start -->
+      <div
+        class="modal fade"
+        id="mainModal"
+        aria-hidden="true"
+        aria-labelledby="mainModalLabel"
+        tabindex="-1"
+      >
+        <div class="modal-dialog modal-dialog-centered modal-lg">
+          <div class="modal-content border-0">
+            <section class="p-4">
+              <div
+                class="modal-header d-flex flex-column align-items-start border-0"
+              >
+                <button
+                  type="button"
+                  class="btn-close"
+                  data-bs-dismiss="modal"
+                  aria-label="Close"
+                ></button>
+                <h3 class="fw-bold">Back this project</h3>
+                <p>
+                  Want to support us in bringing Mastercraft Bamboo Monitor
+                  Riser out in the world?
+                </p>
+              </div>
+              <div class="modal-body d-grid gap-4">
+                <div class="card modal-card p-4">
+                  <label for="no-reward" class="row d-flex justify-content-end">
+                    <div
+                      class="col-1 d-flex justify-content-center align-items-center"
+                    >
+                      <input type="radio" id="no-reward" />
+                    </div>
+                    <label for="no-reward" class="col-11"
+                      ><h4 class="fw-bold fs-6">Pledge with no reward</h4>
+                    </label>
+                    <p class="col-11">
+                      Choose to support us without a reward if you simply
+                      believe in our project. As a backer, you will be signed up
+                      to receive product updates via email.
+                    </p>
+                  </label>
+                </div>
+                <div class="card modal-card p-4">
+                  <label
+                    for="bamboo-stand"
+                    class="row d-flex justify-content-end"
+                  >
+                    <div
+                      class="col-1 d-flex justify-content-center align-items-center"
+                    >
+                      <input type="radio" id="bamboo-stand" />
+                    </div>
+                    <label
+                      for="bamboo-stand"
+                      class="col-11 d-flex align-items-center gap-3"
+                      ><h4 class="fw-bold fs-6">Bamboo Stand</h4>
+                      <h5 class="fs-6">Pledge $25 or more</h5>
+                      <p class="d-flex align-items-center gap-2 ms-auto">
+                        <span class="fw-bold fs-5">101</span> left
+                      </p>
+                    </label>
+                    <p class="col-11">
+                      You get an ergonomic stand made of natural bamboo. You've
+                      helped us launch our promotional campaign, and you’ll be
+                      added to a special Backer member list.
+                    </p>
+                  </label>
+                </div>
+                <div class="card modal-card p-4">
+                  <label
+                    for="black-edition-stand"
+                    class="row d-flex justify-content-end"
+                  >
+                    <div
+                      class="col-1 d-flex justify-content-center align-items-center"
+                    >
+                      <input type="radio" id="black-edition-stand" />
+                    </div>
+                    <label
+                      for="black-edition-stand"
+                      class="col-11 d-flex align-items-center gap-3"
+                      ><h4 class="fw-bold fs-6">Black Edition Stand</h4>
+                      <h5 class="fs-6">Pledge $75 or more</h5>
+                      <p class="d-flex align-items-center gap-2 ms-auto">
+                        <span class="fw-bold fs-5">64</span> left
+                      </p>
+                    </label>
+                    <p class="col-11">
+                      You get a Black Special Edition computer stand and a
+                      personal thank you. You’ll be added to our Backer member
+                      list. Shipping is included.
+                    </p>
+                  </label>
+                </div>
+                <div class="card modal-card p-4 card-inactive">
+                  <label for="mahogany" class="row d-flex justify-content-end">
+                    <div
+                      class="col-1 d-flex justify-content-center align-items-center"
+                    >
+                      <input type="radio" id="mahogany" disabled />
+                    </div>
+                    <label
+                      for="mahogany"
+                      class="col-11 d-flex align-items-center gap-3"
+                      ><h4 class="fw-bold fs-6">Mahogany Special Edition</h4>
+                      <h5 class="fs-6">Pledge $200 or more</h5>
+                      <p class="d-flex align-items-center gap-2 ms-auto">
+                        <span class="fw-bold fs-5">0</span> left
+                      </p>
+                    </label>
+                    <p class="col-11">
+                      You get two Special Edition Mahogany stands, a Backer
+                      T-Shirt, and a personal thank you. You’ll be added to our
+                      Backer member list. Shipping is included.
+                    </p>
+                  </label>
+                </div>
+              </div>
+            </section>
+          </div>
+        </div>
+      </div>
+      <!-- Main Modal end -->
       <div class="container d-grid gap-3">
         <header class="row bg-white p-sm-5 px-4 py-5 gap-3">
           <div class="col-12 text-center position-relative">
@@ -121,7 +247,11 @@
           <div class="row">
             <div class="col-sm-6 col-10">
               <button
+                type="button"
                 class="back-btn border-0 p-3 px-md-5 px-4 rounded-pill text-white"
+                data-bs-toggle="modal"
+                data-bs-target="#mainModal"
+                href="#mainModal"
               >
                 Back this project
               </button>
@@ -156,8 +286,14 @@
             <h2 class="fw-bold">56</h2>
             <p class="m-0">days left</p>
           </div>
-          <div class="progress-bg col-12 p-0 mt-4 border-0">
-            <div class="progress"></div>
+          <div class="progress col-12 p-0 mt-4 border-0">
+            <div
+              class="progress-bar"
+              role="progressbar"
+              aria-valuenow="80"
+              aria-valuemin="0"
+              aria-valuemax="100"
+            ></div>
           </div>
         </section>
         <section class="row bg-white p-sm-5 px-4 py-5 gap-3">
@@ -174,7 +310,7 @@
             extra desk space below your computer to allow notepads, pens, and
             USB sticks to be stored under the stand.
           </p>
-          <div class="card rounded-3">
+          <div class="card">
             <div class="card-body d-grid gap-4">
               <div
                 class="d-flex flex-sm-row flex-column justify-content-between align-items-start align-items-sm-center gap-2"
@@ -201,7 +337,7 @@
               </div>
             </div>
           </div>
-          <div class="card rounded-3">
+          <div class="card">
             <div class="card-body d-grid gap-4">
               <div
                 class="d-flex flex-sm-row flex-column justify-content-between align-items-start align-items-sm-center gap-2"
@@ -228,7 +364,7 @@
               </div>
             </div>
           </div>
-          <div class="card rounded-3">
+          <div class="card card-inactive">
             <div class="card-body d-grid gap-4">
               <div
                 class="d-flex flex-sm-row flex-column justify-content-between align-items-start align-items-sm-center"
@@ -263,29 +399,20 @@
 
     <!-- Selection modal start -->
 
-    <!-- Back this project Want to support us in bringing Mastercraft Bamboo Monitor
-    Riser out in the world? Pledge with no reward Choose to support us without a
-    reward if you simply believe in our project. As a backer, you will be signed
-    up to receive product updates via email. Bamboo Stand Pledge $25 or more You
-    get an ergonomic stand made of natural bamboo. You've helped us launch our
-    promotional campaign, and you’ll be added to a special Backer member list.
+    <!--  Bamboo Stand Pledge $25 or more 
     101 left -->
 
     <!-- Selected pledge start -->
     <!-- Enter your pledge $25 Continue -->
     <!-- Selected pledge end -->
 
-    <!-- Black Edition Stand Pledge $75 or more You get a Black Special Edition
-    computer stand and a personal thank you. You’ll be added to our Backer
-    member list. Shipping is included. 64 left -->
+    <!-- Black Edition Stand Pledge $75 or more  64 left -->
 
     <!-- Selected pledge start -->
     <!-- Enter your pledge $75 Continue -->
     <!-- Selected pledge end -->
 
-    <!-- Mahogany Special Edition Pledge $200 or more You get two Special Edition
-    Mahogany stands, a Backer T-Shirt, and a personal thank you. You’ll be added
-    to our Backer member list. Shipping is included. 0 left -->
+    <!-- Mahogany Special Edition Pledge $200 or more  0 left -->
 
     <!-- Selected pledge  start -->
     <!-- Enter your pledge $200 Continue -->

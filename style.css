@@ -8,12 +8,14 @@
 
 * {
   font-family: "Commissioner", sans-serif;
+  box-sizing: border-box;
 }
 html,
 body {
   height: 100%;
   background-color: rgb(250, 250, 250);
   overflow-x: hidden;
+  color: var(--Dark-gray);
 }
 
 .main-header {
@@ -28,7 +30,6 @@ body {
 .container {
   transform: translateY(-75px);
   max-width: 720px;
-  color: var(--Dark-gray);
 }
 
 ul li {
@@ -107,18 +108,21 @@ button {
   border-right: 1px solid hsl(0, 3%, 84%);
 }
 
-.progress-bg {
+.progress {
   width: 100%;
   height: 0.8rem;
   border-radius: 0.8rem;
   background: hsl(0, 3%, 94%);
 }
 
-.progress {
+.progress-bar {
   width: 80%;
-  height: 100%;
   border-radius: 1rem;
   background-color: var(--Moderate-cyan);
+}
+
+.card {
+  border-radius: 0.5rem;
 }
 
 .card h5 {
@@ -134,13 +138,67 @@ button.disabled {
   background-color: var(--Dark-gray);
 }
 
-.card:last-child {
+.card-inactive {
   opacity: 0.5;
 }
 
 .back-btn:hover,
 .card button:hover {
   background-color: var(--Dark-cyan);
+}
+
+/* MAIN MODAL */
+
+main .modal-content {
+  border-radius: 0.6rem;
+  width: 720px;
+}
+
+.btn-close {
+  background: url(images/icon-close-modal.svg);
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.modal-card {
+  color: var(--Dark-gray);
+}
+
+.modal-card h3 {
+  color: var(--Black);
+}
+
+input[type="radio"] {
+  /* Add if not using autoprefixer */
+  -webkit-appearance: none;
+  appearance: none;
+  /* For iOS < 15 to remove gradient background */
+  background-color: #fff;
+  /* Not removed via appearance */
+  margin: 0;
+  font: inherit;
+  color: var(--Dark-cyan);
+  width: 1.15em;
+  height: 1.15em;
+  border: 1px solid hsl(0, 3%, 84%);
+  border-radius: 50%;
+  transform: translateY(-0.075em);
+  display: grid;
+  place-content: center;
+}
+
+input[type="radio"]::before {
+  content: "";
+  width: 0.65em;
+  height: 0.65em;
+  border-radius: 50%;
+  transform: scale(0);
+  transition: 120ms transform ease-in-out;
+  box-shadow: inset 1em 1em var(--Moderate-cyan);
+}
+
+input[type="radio"]:checked::before {
+  transform: scale(1);
 }
 
 /* RESPONSIVE */
@@ -150,18 +208,18 @@ button.disabled {
     font-size: 0.85rem;
   }
 
-  .modal-dialog {
+  .nav-modal-dialog {
     position: absolute;
     top: 5rem;
     right: 3%;
     left: 3%;
   }
 
-  .modal-body {
+  .nav-modal-body {
     border-radius: 0.7rem;
   }
 
-  .modal-dialog button {
+  .nav-modal-dialog button {
     top: -70px;
     right: 0;
   }
