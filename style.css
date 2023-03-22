@@ -151,7 +151,6 @@ button.disabled {
 
 main .modal-content {
   border-radius: 0.6rem;
-  width: 720px;
 }
 
 .btn-close {
@@ -239,6 +238,11 @@ input[type="number"] {
   color: hsl(0, 3%, 74%);
   font-size: 0.8rem;
   top: 4px;
+}
+
+#collapseModalThankYou button {
+  font-size: 0.8rem;
+  background-color: var(--Moderate-cyan);
 }
 
 /* RESPONSIVE */

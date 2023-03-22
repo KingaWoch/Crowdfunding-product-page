@@ -194,7 +194,12 @@
                             class="rounded-pill fw-bold text-center"
                           />
                         </div>
-                        <button class="rounded-pill border-0 px-4 text-white">
+                        <button
+                          class="rounded-pill border-0 px-4 text-white"
+                          data-bs-target="#collapseModalThankYou"
+                          data-bs-toggle="modal"
+                          data-bs-dismiss="modal"
+                        >
                           Continue
                         </button>
                       </div>
@@ -279,6 +284,28 @@
               </div>
             </section>
           </div>
+        </div>
+      </div>
+      <div
+        class="modal fade"
+        id="collapseModalThankYou"
+        aria-hidden="true"
+        aria-labelledby="collapseModalThankYou"
+        tabindex="-1"
+      >
+        <div class="modal-dialog modal-dialog-centered">
+          <div class="modal-content border-0">
+            <section class="d-flex flex-column align-items-center gap-3 p-4 ">
+              <img src="images/icon-check.svg" alt="thank-you" />
+              <h2 class="fw-bold">Thanks for your support!</h2>
+              <p class="text-center">
+                Your pledge brings us one step closer to sharing Mastercraft
+                Bamboo Monitor Riser worldwide. You will get an email once our
+                campaign is completed.
+              </p>
+              <button class="rounded-pill border-0 p-3 px-4 text-white">Got it!</button>
+            </div>
+          </section>
         </div>
       </div>
       <!-- Main Modal end -->
@@ -474,9 +501,7 @@
 
     <!-- Success modal start -->
 
-    <!-- Thanks for your support! Your pledge brings us one step closer to sharing
-    Mastercraft Bamboo Monitor Riser worldwide. You will get an email once our
-    campaign is completed. Got it! -->
+    <!-- Thanks for your support!  Got it! -->
 
     <!-- Success modal end -->
     <script src="script.js"></script>
