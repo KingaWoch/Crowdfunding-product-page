@@ -115,7 +115,7 @@
       >
         <div class="modal-dialog modal-dialog-centered modal-lg">
           <div class="modal-content border-0">
-            <section class="p-4">
+            <section class="p-md-4 p-3">
               <div
                 class="modal-header d-flex flex-column align-items-start border-0"
               >
@@ -133,16 +133,16 @@
               </div>
               <div class="modal-body d-grid gap-4">
                 <div class="card modal-card p-4">
-                  <label for="no-reward" class="row d-flex justify-content-end">
+                  <label for="no-reward" class="modal-label row d-flex justify-content-end">
                     <div
-                      class="col-1 d-flex justify-content-center align-items-center"
+                      class="col-md-1 col-2 d-flex justify-content-center align-items-center"
                     >
-                      <input type="radio" id="no-reward" />
+                      <input type="radio" id="no-reward" name="radio" />
                     </div>
-                    <label for="no-reward" class="col-11"
+                    <label for="no-reward" class="col-md-11 col-10"
                       ><h4 class="fw-bold fs-6">Pledge with no reward</h4>
                     </label>
-                    <p class="col-11">
+                    <p class="col-md-11 col-12 pt-2">
                       Choose to support us without a reward if you simply
                       believe in our project. As a backer, you will be signed up
                       to receive product updates via email.
@@ -152,7 +152,7 @@
                 <div class="card modal-card">
                   <label
                     for="bamboo-stand"
-                    class="row d-flex justify-content-end p-4"
+                    class="modal-label row d-flex justify-content-end p-4"
                     data-bs-toggle="collapse"
                     href="#collapseModal"
                     role="button"
@@ -160,28 +160,31 @@
                     aria-controls="collapseModal"
                   >
                     <div
-                      class="col-1 d-flex justify-content-center align-items-center"
+                      class="col-md-1 col-2 d-flex justify-content-center align-items-center"
                     >
-                      <input type="radio" id="bamboo-stand" />
+                      <input type="radio" id="bamboo-stand" name="radio"/>
                     </div>
                     <label
                       for="bamboo-stand"
-                      class="col-11 d-flex align-items-center gap-3"
+                      class="col-md-11 col-10 d-flex align-items-md-center flex-md-row flex-column gap-md-3"
                       ><h4 class="fw-bold fs-6">Bamboo Stand</h4>
                       <h5 class="fs-6">Pledge $25 or more</h5>
-                      <p class="d-flex align-items-center gap-2 ms-auto">
+                      <p class="d-flex align-items-center gap-2 ms-auto d-md-flex d-none">
                         <span class="fw-bold fs-5">101</span> left
                       </p>
                     </label>
-                    <p class="col-11">
+                    <p class="col-md-11 col-12 pt-2">
                       You get an ergonomic stand made of natural bamboo. You've
                       helped us launch our promotional campaign, and you’ll be
                       added to a special Backer member list.
                     </p>
+                    <p class="d-flex align-items-center gap-2 ms-auto d-flex d-md-none">
+                      <span class="fw-bold fs-5">101</span> left
+                    </p>
                   </label>
                   <div class="collapse" id="collapseModal">
                     <div
-                      class="border-top d-flex justify-content-between align-items-center p-4"
+                      class="border-top d-flex flex-md-row flex-column justify-content-between align-items-center p-4 gap-md-0 gap-3"
                     >
                       <p class="mb-0">Enter your pledge</p>
                       <div class="d-flex gap-3">
@@ -209,7 +212,7 @@
                 <div class="card modal-card">
                   <label
                     for="black-edition-stand"
-                    class="row d-flex justify-content-end p-4"
+                    class="modal-label row d-flex justify-content-end p-4"
                     data-bs-toggle="collapse"
                     href="#collapseModal2"
                     role="button"
@@ -217,28 +220,31 @@
                     aria-controls="collapseModal2"
                   >
                     <div
-                      class="col-1 d-flex justify-content-center align-items-center"
+                      class="col-md-1 col-2 d-flex justify-content-center align-items-center"
                     >
-                      <input type="radio" id="black-edition-stand" />
+                      <input type="radio" id="black-edition-stand" name="radio" />
                     </div>
                     <label
                       for="black-edition-stand"
-                      class="col-11 d-flex align-items-center gap-3"
+                      class="col-md-11 col-10 d-flex align-items-md-center flex-md-row flex-column gap-md-3"
                       ><h4 class="fw-bold fs-6">Black Edition Stand</h4>
                       <h5 class="fs-6">Pledge $75 or more</h5>
-                      <p class="d-flex align-items-center gap-2 ms-auto">
+                      <p class="d-flex align-items-center gap-2 ms-auto d-md-flex d-none">
                         <span class="fw-bold fs-5">64</span> left
                       </p>
                     </label>
-                    <p class="col-11">
+                    <p class="col-md-11 col-12 pt-2">
                       You get a Black Special Edition computer stand and a
                       personal thank you. You’ll be added to our Backer member
                       list. Shipping is included.
                     </p>
+                    <p class="d-flex align-items-center gap-2 ms-auto d-flex d-md-none">
+                      <span class="fw-bold fs-5">64</span> left
+                    </p>
                   </label>
                   <div class="collapse" id="collapseModal2">
                     <div
-                      class="border-top d-flex justify-content-between align-items-center p-4"
+                      class="border-top d-flex flex-md-row flex-column justify-content-between align-items-center p-4 gap-md-0 gap-3"
                     >
                       <p class="mb-0">Enter your pledge</p>
                       <div class="d-flex gap-3">
@@ -251,7 +257,9 @@
                             class="rounded-pill fw-bold text-center"
                           />
                         </div>
-                        <button class="rounded-pill border-0 px-4 text-white">
+                        <button class="rounded-pill border-0 px-4 text-white" data-bs-target="#collapseModalThankYou"
+                        data-bs-toggle="modal"
+                        data-bs-dismiss="modal">
                           Continue
                         </button>
                       </div>
@@ -261,23 +269,26 @@
                 <div class="card modal-card p-4 card-inactive">
                   <label for="mahogany" class="row d-flex justify-content-end">
                     <div
-                      class="col-1 d-flex justify-content-center align-items-center"
+                      class="col-md-1 col-2 d-flex justify-content-center align-items-center"
                     >
                       <input type="radio" id="mahogany" disabled />
                     </div>
                     <label
                       for="mahogany"
-                      class="col-11 d-flex align-items-center gap-3"
+                      class="col-11 d-flex align-items-md-center flex-md-row flex-column gap-md-3"
                       ><h4 class="fw-bold fs-6">Mahogany Special Edition</h4>
                       <h5 class="fs-6">Pledge $200 or more</h5>
-                      <p class="d-flex align-items-center gap-2 ms-auto">
+                      <p class="d-flex align-items-center gap-2 ms-auto d-md-flex d-none">
                         <span class="fw-bold fs-5">0</span> left
                       </p>
                     </label>
-                    <p class="col-11">
+                    <p class="col-md-11 col-12  pt-2">
                       You get two Special Edition Mahogany stands, a Backer
                       T-Shirt, and a personal thank you. You’ll be added to our
                       Backer member list. Shipping is included.
+                    </p>
+                    <p class="d-flex align-items-center gap-2 ms-auto d-flex d-md-none">
+                      <span class="fw-bold fs-5">0</span> left
                     </p>
                   </label>
                 </div>
@@ -303,7 +314,8 @@
                 Bamboo Monitor Riser worldwide. You will get an email once our
                 campaign is completed.
               </p>
-              <button class="rounded-pill border-0 p-3 px-4 text-white">Got it!</button>
+              <button class="rounded-pill border-0 p-3 px-4 text-white" data-bs-dismiss="modal"
+              aria-label="Close">Got it!</button>
             </div>
           </section>
         </div>

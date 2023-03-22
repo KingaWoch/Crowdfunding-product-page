@@ -31,3 +31,18 @@ bookmarkBtnIcon.addEventListener("click", () => {
     bookmarkBtn.innerHTML = "Bookmark";
   }
 });
+
+const labels = document.querySelectorAll(".modal-label");
+
+labels.forEach((label) => {
+  label.addEventListener("click", () => {
+    if (!label.parentNode.classList.contains("active")) {
+      label.parentNode.classList.toggle("active");
+    } else {
+      labels.forEach((label) => {
+        label.parentNode.classList.remove("active");
+      });
+      label.parentNode.classList.add("active");
+    }
+  });
+});

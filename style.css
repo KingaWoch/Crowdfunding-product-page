@@ -10,6 +10,7 @@
   font-family: "Commissioner", sans-serif;
   box-sizing: border-box;
 }
+
 html,
 body {
   height: 100%;
@@ -62,6 +63,10 @@ h3,
 h4,
 .card span {
   color: var(--Black);
+}
+
+p {
+  line-height: 1.8;
 }
 
 button {
@@ -177,6 +182,10 @@ label h4:hover {
   cursor: default;
 }
 
+.modal-card label {
+  cursor: pointer;
+}
+
 input[type="radio"] {
   /* Add if not using autoprefixer */
   -webkit-appearance: none;
@@ -210,12 +219,17 @@ input[type="radio"]:checked::before {
   transform: scale(0.5);
 }
 
+.modal-card.active {
+  border: 2px solid var(--Moderate-cyan);
+}
+
 input[type="number"] {
   cursor: pointer;
   padding: 1rem;
   width: 80px;
   height: 40px;
-  border: 2px solid hsl(0, 3%, 84%);
+  border: none;
+  outline: 2px solid hsl(0, 3%, 84%);
 }
 
 /* Chrome, Safari, Edge, Opera */
@@ -234,6 +248,10 @@ input[type="number"] {
   height: 40px;
 }
 
+input[type="number"]:focus {
+  outline: 2px solid var(--Moderate-cyan);
+}
+
 .collapse .input-group-text {
   color: hsl(0, 3%, 74%);
   font-size: 0.8rem;
@@ -243,6 +261,10 @@ input[type="number"] {
 #collapseModalThankYou button {
   font-size: 0.8rem;
   background-color: var(--Moderate-cyan);
+}
+
+#collapseModalThankYou button:hover {
+  background-color: var(--Dark-cyan);
 }
 
 /* RESPONSIVE */
