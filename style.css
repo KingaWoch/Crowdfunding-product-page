@@ -267,6 +267,10 @@ input[type="number"]:focus {
   background-color: var(--Dark-cyan);
 }
 
+.attribution {
+  font-size: 0.7rem;
+}
+
 /* RESPONSIVE */
 
 @media (max-width: 575px) {
