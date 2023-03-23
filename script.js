@@ -46,3 +46,47 @@ labels.forEach((label) => {
     }
   });
 });
+
+const inputs = document.querySelectorAll("input[type=number]");
+const continueBtn = document.querySelectorAll(".continue");
+const totalValue = document.querySelector(".total-value");
+const totalBackers = document.querySelector(".total-backers");
+const progressBar = document.querySelector(".progress-bar");
+// console.log(progressBar.ariaValueNow);
+// console.log(
+//   (Number(totalValue.innerHTML.replace(/[^0-9\.]+/g, "")) / 100000) * 100 + "%"
+// );
+
+//console.log(continueBtn);
+//console.log(inputs);
+
+// console.log(totalValue.innerHTML);
+//console.log(Number(totalValue.innerHTML.replace(/[^0-9\.]+/g, "")));
+
+inputs.forEach((input) => {
+  input.addEventListener("input", () => {
+    totalValue.innerHTML =
+      "$" +
+      (
+        Number(totalValue.innerHTML.replace(/[^0-9\.]+/g, "")) +
+        parseInt(input.value)
+      ).toLocaleString("en-US");
+    // progressBar.ariaValueNow =
+    //   Number(totalValue.innerHTML.replace(/[^0-9\.]+/g, "")) +
+    //   parseInt(input.value);
+    // progressBar.style.width =
+    //   progressBar.style.width +
+    //   (Number(totalValue.innerHTML.replace(/[^0-9\.]+/g, "")) / 100000) * 100 +
+    //   "%";
+  });
+});
+
+// console.log(progressBar.style.width);
+
+continueBtn.forEach((btn) => {
+  btn.addEventListener("click", () => {
+    totalBackers.innerHTML = (
+      parseInt(totalBackers.innerHTML.replaceAll(",", "")) + 1
+    ).toLocaleString("en-US");
+  });
+});

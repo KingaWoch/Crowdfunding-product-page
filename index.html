@@ -109,6 +109,7 @@
       <div
         class="modal fade"
         id="mainModal"
+        data-bs-backdrop="static" data-bs-keyboard="false"
         aria-hidden="true"
         aria-labelledby="mainModalLabel"
         tabindex="-1"
@@ -132,8 +133,12 @@
                 </p>
               </div>
               <div class="modal-body d-grid gap-4">
-                <div class="card modal-card p-4">
-                  <label for="no-reward" class="modal-label row d-flex justify-content-end">
+                <div class="card modal-card">
+                  <label for="no-reward" class="modal-label row d-flex justify-content-end p-4" data-bs-toggle="collapse"
+                  href="#collapseModal"
+                  role="button"
+                  aria-expanded="false"
+                  aria-controls="collapseModal">
                     <div
                       class="col-md-1 col-2 d-flex justify-content-center align-items-center"
                     >
@@ -148,16 +153,31 @@
                       to receive product updates via email.
                     </p>
                   </label>
+                  <div class="collapse" id="collapseModal">
+                    <div
+                      class="border-top d-flex flex-md-row flex-column justify-content-end align-items-center p-4 gap-md-0 gap-3"
+                    >
+                        <button
+                          class="continue rounded-pill border-0 px-4 text-white"
+                          data-bs-target="#collapseModalThankYou"
+                          data-bs-toggle="modal"
+                          data-bs-dismiss="modal"
+                        >
+                          Continue
+                        </button>
+                      
+                    </div>
+                  </div>
                 </div>
                 <div class="card modal-card">
                   <label
                     for="bamboo-stand"
                     class="modal-label row d-flex justify-content-end p-4"
                     data-bs-toggle="collapse"
-                    href="#collapseModal"
+                    href="#collapseModal1"
                     role="button"
                     aria-expanded="false"
-                    aria-controls="collapseModal"
+                    aria-controls="collapseModal1"
                   >
                     <div
                       class="col-md-1 col-2 d-flex justify-content-center align-items-center"
@@ -182,7 +202,7 @@
                       <span class="fw-bold fs-5">101</span> left
                     </p>
                   </label>
-                  <div class="collapse" id="collapseModal">
+                  <div class="collapse" id="collapseModal1">
                     <div
                       class="border-top d-flex flex-md-row flex-column justify-content-between align-items-center p-4 gap-md-0 gap-3"
                     >
@@ -198,7 +218,7 @@
                           />
                         </div>
                         <button
-                          class="rounded-pill border-0 px-4 text-white"
+                          class="continue rounded-pill border-0 px-4 text-white"
                           data-bs-target="#collapseModalThankYou"
                           data-bs-toggle="modal"
                           data-bs-dismiss="modal"
@@ -257,9 +277,10 @@
                             class="rounded-pill fw-bold text-center"
                           />
                         </div>
-                        <button class="rounded-pill border-0 px-4 text-white" data-bs-target="#collapseModalThankYou"
-                        data-bs-toggle="modal"
-                        data-bs-dismiss="modal">
+                        <button class="continue rounded-pill border-0 px-4 text-white" data-bs-target="#collapseModalThankYou"
+                        data-bs-toggle="modal" 
+                        data-bs-dismiss="modal"
+                        >
                           Continue
                         </button>
                       </div>
@@ -361,13 +382,13 @@
         </header>
         <section class="stats row bg-white p-sm-5 px-4 py-5 gap-sm-0 gap-3">
           <div class="col-sm-4 col-12 text-sm-start text-center">
-            <h2 class="fw-bold">$89,914</h2>
+            <h2 class="total-value fw-bold">$89,914</h2>
             <p class="m-sm-0 mb-4">of $100,000 backed</p>
             <div class="line"></div>
           </div>
 
           <div class="col-sm-4 col-12 ps-md-5 text-sm-start text-center">
-            <h2 class="fw-bold">5,007</h2>
+            <h2 class="total-backers fw-bold">5,007</h2>
             <p class="m-sm-0 mb-4">total backers</p>
             <div class="line"></div>
           </div>
@@ -381,9 +402,9 @@
             <div
               class="progress-bar"
               role="progressbar"
-              aria-valuenow="80"
+              aria-valuenow="89914"
               aria-valuemin="0"
-              aria-valuemax="100"
+              aria-valuemax="100000"
             ></div>
           </div>
         </section>
