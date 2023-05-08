@@ -20,6 +20,7 @@ bookmarkBtn.addEventListener("click", () => {
   } else {
     bookmarkBtn.innerHTML = "Bookmark";
   }
+  console.log(bookmarkBtn.classList[4]);
 });
 
 bookmarkBtnIcon.addEventListener("click", () => {
@@ -50,7 +51,9 @@ labels.forEach((label) => {
 const inputs = document.querySelectorAll("input[type=number]");
 const continueBtn = document.querySelectorAll(".continue");
 const totalValue = document.querySelector(".total-value");
+totalValue.innerHTML = JSON.parse(localStorage.getItem("value")) || "89,914";
 const totalBackers = document.querySelector(".total-backers");
+totalBackers.innerHTML = JSON.parse(localStorage.getItem("backers")) || "5,007";
 const progressBar = document.querySelector(".progress-bar");
 // console.log(progressBar.ariaValueNow);
 // console.log(
@@ -71,6 +74,7 @@ inputs.forEach((input) => {
         Number(totalValue.innerHTML.replace(/[^0-9\.]+/g, "")) +
         parseInt(input.value)
       ).toLocaleString("en-US");
+    localStorage.setItem("value", JSON.stringify(totalValue.innerHTML));
     // progressBar.ariaValueNow =
     //   Number(totalValue.innerHTML.replace(/[^0-9\.]+/g, "")) +
     //   parseInt(input.value);
@@ -88,5 +92,6 @@ continueBtn.forEach((btn) => {
     totalBackers.innerHTML = (
       parseInt(totalBackers.innerHTML.replaceAll(",", "")) + 1
     ).toLocaleString("en-US");
+    localStorage.setItem("backers", JSON.stringify(totalBackers.innerHTML));
   });
 });
